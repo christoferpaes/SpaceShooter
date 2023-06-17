@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="667dp"
+            android:layout_marginBottom="16dp"
+            android:text="Stop Game" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/gameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Background -->
+
+        <com.example.releaseofspaceshooter.GameView
+            android:id="@+id/gameView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/playerSpaceship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player" />
+
+        <!-- Enemy Spaceships -->
+
+
+
+
+        <ImageView
+            android:id="@+id/enemySpaceship1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="100dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/enemy"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/enemySpaceship2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/enemy" />
+
+        <ImageView
+            android:id="@+id/enemySpaceship3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="300dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/enemy" />
+
+        <!-- Player Spaceship -->
+
+        <!-- Collision Objects -->
+        <ImageView
+            android:id="@+id/moon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="400dp"
+            android:src="@drawable/enemy" />
+
+        <ImageView
+            android:id="@+id/spaceStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/enemy" />
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="TODO"
+            android:src="@drawable/background"
+            tools:ignore="ContentDescription" />
+
+        <!-- GameView -->
+
+    </FrameLayout>
+
+    <!-- Stop Game Button -->
+
+    <!-- Scoreboard -->
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Score: 0"
+        android:textColor="#263238"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/startbutton_main"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="667dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:text="Start Game" />
+
+</RelativeLayout>
